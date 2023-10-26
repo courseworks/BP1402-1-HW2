@@ -12,20 +12,25 @@
 int test_add() {
     int result = add(2, 3);
     ASSERT(result == 5);
+    return 0;
 }
 
 int test_subtract() {
     int result = subtract(6, 3);
     ASSERT(result == 3);
+    return 0;
 }
 
 int main() {
     printf("Running tests...\n");
 
-    test_add();
-    test_subtract();
+    int add_result = test_add();
+    int subtract_result = test_subtract();
 
-    printf("All tests passed!\n");
+    if (add_result == 0 && subtract_result == 0)
+        printf("All tests passed!\n");
+    else
+        printf("Some tests failed!\n");
 
     return 0;
 }
