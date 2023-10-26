@@ -17,4 +17,18 @@ jobs:
       run: gcc HW.c unit_tests.c -o test
 
     - name: Run tests
-      run: ./test
+      id: test
+      run: |
+        ./test > test_output.txt
+
+    - name: Analyze test output
+      run: |
+        failed_tests=$(grep -wn "Assertion failed" test_output.txt || true)
+        if [ -n "$failed_tests" ]; then
+          echo "❌ Tests failed:"
+          echo "$failed_tests"
+          exit 1
+        else
+          echo "✅ All tests passed!"
+          exit 0
+        fi
