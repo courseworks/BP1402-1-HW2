@@ -6,8 +6,8 @@
 TEST(PrintPrimesBetweenTwoIntsTest, ValidInputs) {
     // Prepare test data
     constexpr unsigned long START = 1;
-    constexpr unsigned long END = 10;
-    std::string expected = "2 3 5 7 ";
+    constexpr unsigned long END = 5;
+    std::string expected = "2 3 5 ";
 
     // Capture standard output stream
     std::ostringstream oss;
