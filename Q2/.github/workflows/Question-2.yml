@@ -1,0 +1,20 @@
+name: Build and Run Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build the Docker image
+        run: docker build -t my-image .
+
+      - name: Run the code
+        run: docker run my-image
