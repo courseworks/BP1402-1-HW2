@@ -2,8 +2,8 @@ name: Build and Run Docker Image
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+    paths: [ "Q5/" ]
 
 jobs:
   build-and-run:
