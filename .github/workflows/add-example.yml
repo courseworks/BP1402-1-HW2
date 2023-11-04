@@ -1,4 +1,4 @@
-name: Build and Run Docker Image
+name: Add example
 
 on:
   push:

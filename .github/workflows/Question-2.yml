@@ -1,4 +1,4 @@
-name: Build and Run Docker Image
+name: Question-2
 
 on:
   push:
