@@ -3,7 +3,7 @@ name: Question-5
 on:
   push:
     branches: [ "main" ]
-    paths: [ "Q5/" ]
+    paths: [ "Q5//**" ]
 
 jobs:
   build-and-run:

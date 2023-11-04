@@ -3,7 +3,7 @@ name: Add example
 on:
   push:
     branches: [ "main" ]
-    paths: [ "Additional_example/" ]
+    paths: [ "Additional_example/**" ]
 
 jobs:
   build-and-run:
