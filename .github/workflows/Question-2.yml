@@ -19,6 +19,8 @@ jobs:
       - name: pwd
         run: pwd
       - name: Build docker image
-        run: docker build -t my-image .
+        run: cd Q2/ && docker build -t my-image .
+      - name: pwd
+        run: pwd
       - name: Run the code
-        run: docker run my-image
+        run: cd Q2/ && docker run my-image
