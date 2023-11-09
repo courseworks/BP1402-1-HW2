@@ -4,7 +4,7 @@
 
 TEST(TestSuite, AddTwoNumbers) {
   int a = 1;
-  int b = 5;
+  int b = 2;
   int expected_result = 3;
 
   int actual_result = add_two_numbers(a, b);
