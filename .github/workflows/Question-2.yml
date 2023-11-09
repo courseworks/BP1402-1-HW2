@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      - name: current directory
+        run: pwd
       - name: Build the Docker image
         run: docker build -t my-image Q2/Dockerfile
 
