@@ -12,15 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: check ls
-        run: ls -alth
-      - name: change dir and pwd
-        run: cd Q2/ && pwd
-      - name: pwd
-        run: pwd
       - name: Build docker image
         run: cd Q2/ && docker build -t my-image .
-      - name: pwd
-        run: pwd
       - name: Run the code
         run: cd Q2/ && docker run my-image

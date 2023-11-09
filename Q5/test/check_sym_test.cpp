@@ -15,4 +15,5 @@ TEST(SymmetryTest, NegativeCases) {
     EXPECT_FALSE(isSymmetric(12345));
     EXPECT_FALSE(isSymmetric(112233));
     EXPECT_FALSE(isSymmetric(123456));
+    EXPECT_FALSE(isSymmetric(654875));
 }

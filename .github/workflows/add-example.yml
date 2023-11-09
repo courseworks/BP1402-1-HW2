@@ -12,9 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build the Docker image
-        run: docker build -t my-image .
-
+      - name: Build docker image
+        run: cd Additional_example/ && docker build -t my-image .
       - name: Run the code
-        run: docker run my-image
+        run: cd Additional_example/ && docker run my-image

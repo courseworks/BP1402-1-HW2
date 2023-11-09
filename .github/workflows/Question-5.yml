@@ -3,7 +3,7 @@ name: Question-5
 on:
   push:
     branches: [ "main" ]
-    paths: [ "Q5//**" ]
+    paths: [ "Q5/**" ]
 
 jobs:
   build-and-run:
@@ -12,9 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build the Docker image
-        run: docker build -t my-image .
-
+      - name: Build docker image
+        run: cd Q5/ && docker build -t my-image .
       - name: Run the code
-        run: docker run my-image
+        run: cd Q5/ && docker run my-image
